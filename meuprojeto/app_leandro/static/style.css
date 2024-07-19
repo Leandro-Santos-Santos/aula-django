@@ -1,0 +1,231 @@
+.Texto_principal{
+    color: rgb(202, 105, 25);
+    text-align: center;
+}
+
+body {
+    background-color: orange;
+}
+
+footer {
+    background-color:black;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+header {
+    background-color: black;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.imglogo {
+    display: block; /* Para garantir que as propriedades de tamanho funcionem corretamente */
+    margin: 100 auto; /* Centraliza horizontalmente */
+    width: 300px; /* Define a largura desejada */
+    height: auto; /* Mantém a proporção original da imagem */
+}
+
+
+
+/*-------------------------------------------- CSS Login --------------------------------/*
+/* Estiliza o corpo */
+body {
+    background-color: orange; /* Define a cor de fundo do corpo para laranja */
+    color: black; /* Define a cor do texto como preta */
+    font-family: Arial, sans-serif; /* Define a fonte */
+}
+
+/* Estiliza o formulário */
+form {
+    background-color: black; /* Define a cor de fundo do formulário para preto */
+    color: white; /* Define a cor do texto como branca */
+    padding: 83px; /* Adiciona padding ao redor do formulário */
+    border-radius: 10px; /* Adiciona bordas arredondadas */
+    max-width: 500px; /* Define a largura máxima do formulário */
+    margin: 90px auto; /* Centraliza o formulário horizontalmente e adiciona espaçamento vertical */
+}
+
+/* Estiliza os labels */
+label {
+    display: block; /* Torna o label um bloco */
+    margin-bottom: 10px; /* Adiciona margem inferior */
+    color: white; /* Define a cor do texto do label como branca */
+}
+
+/* Estiliza os inputs */
+input, textarea {
+    display: block; /* Torna os campos de entrada blocos */
+    width: 94%; /* Define a largura dos campos de entrada como 100% do formulário */
+    padding: 16px; /* Adiciona padding interno */
+    margin-bottom: 20px; /* Adiciona margem inferior */
+    border: none; /* Remove as bordas */
+    border-radius: 5px; /* Adiciona bordas arredondadas */
+}
+
+/* Estiliza o botão */
+button {
+    background-color: orange; /* Define a cor de fundo do botão para laranja */
+    color: black; /* Define a cor do texto como preta */
+    padding: 10px 20px; /* Adiciona padding */
+    border: none; /* Remove as bordas */
+    border-radius: 5px; /* Adiciona bordas arredondadas */
+    cursor: pointer; /* Altera o cursor para pointer */
+}
+
+/* Estiliza o botão ao passar o mouse */
+button:hover {
+    background-color: darkorange; /* Altera a cor de fundo para laranja escura ao passar o mouse */
+}
+
+/* Estiliza as mensagens de erro */
+span {
+    color: red; /* Define a cor do texto como vermelha */
+    display: block; /* Torna o span um bloco */
+    margin-top: -15px; /* Adiciona margem superior negativa para reduzir espaço */
+    margin-bottom: 10px; /* Adiciona margem inferior */
+}
+
+/*-------------------------------------------------------------------------------------------------------------------/*
+
+
+/*---------------------------------------CSS Contato-----------------------------------------/*
+/* Arquivo: static/styles.css */
+
+/* Estilo para o body */
+body {
+    background-color: orange; /* Cor de fundo laranja */
+    color: black; /* Cor do texto preto */
+    font-family: Arial, sans-serif; /* Fonte padrão */
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo para o formulário */
+form {
+    background-color: black; /* Cor de fundo preta do formulário */
+    color: white; /* Cor do texto branco */
+    padding: 20px;
+    width: 300px; /* Largura do formulário */
+    margin: 20px auto; /* Centraliza o formulário horizontalmente */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Estilo para as etiquetas dos campos */
+form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Estilo para os campos de entrada */
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: calc(100% - 20px); /* Largura do campo de entrada */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 16px;
+}
+
+/* Estilo para o botão de envio */
+form button[type="submit"] {
+    padding: 10px 20px;
+    background-color: orange; /* Cor de fundo laranja para o botão */
+    color: black; /* Cor do texto preto */
+    border: none;
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Estilo para mensagens de erro */
+form span.error {
+    color: red; /* Cor vermelha para mensagens de erro */
+    font-size: 14px;
+}
+
+
+
+/*-----------------------------------------------------CSS Contatos---------------------------------------------------*/
+th, td {
+    padding: 10px;/* Adiciona um espaçamento interno de 10px em todas as direções às células da tabela (cabeçalho e corpo)*/
+    text-align: left;/*Alinha o texto das células à esquerda.*/
+    border-right: 3px solid black;/*Adiciona uma linha vertical sólida de 1px de espessura na cor #ddd à direita de cada célula da tabela.*/
+  }
+  
+  th {
+    font-weight: bold;/*Torna o texto das células do cabeçalho (th) negrito.*/
+    border-bottom: 2px solid black;/*Adiciona uma linha horizontal sólida de 2px de espessura na cor #ddd na parte inferior das células do cabeçalho.*/
+  }
+  
+  td {
+    border-bottom: 1px solid black;/*Adiciona uma linha horizontal sólida de 1px de espessura na cor #ddd na parte inferior das células do corpo (td).*/
+  }
+  
+  .table-hover tbody tr:hover {
+    background-color: black;/*Muda o fundo da linha para a cor #eee (cinza claro) quando o mouse passar sobre ela.*/
+  }
+
+
+  /*-----------------------------imagem Usuario-------------------*/
+.imgpython {
+    display: block; /* Garante que a imagem é tratada como um bloco */
+    margin: auto;   /* Define margens automáticas */
+}
+
+
+
+
+.navbar {
+    background-color: black; /* Cor de fundo da barra de navegação */
+    padding: 10px; /* Espaçamento interno */
+}
+
+.navbar ul {
+    list-style-type: none; /* Remove os marcadores de lista padrão */
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Alinha os itens da lista ao centro */
+}
+
+.navbar ul li {
+    display: inline; /* Exibe os itens da lista lado a lado */
+    margin: 0 10px; /* Margem entre os itens */
+}
+
+.navbar ul li a {
+    color: black; /* Cor do texto dos links */
+    text-decoration: none; /* Remove sublinhado padrão dos links */
+    padding: 5px 10px; /* Espaçamento interno dos links */
+}
+
+.navbar ul li a:hover {
+    background-color: black; /* Cor de fundo ao passar o mouse sobre os links */
+}
+
+.container {
+    width: 80%; /* Largura do contêiner */
+    max-width: 1200px; /* Largura máxima do contêiner */
+    margin: 0 auto; /* Centraliza horizontalmente o contêiner */
+    background-color: black; /* Cor de fundo do contêiner */
+    padding: 20px; /* Espaçamento interno do contêiner */
+    border: 1px solid black; /* Borda do contêiner */
+    box-sizing: border-box; /* Inclui a borda no cálculo total da largura */
+}
+
+.container p {
+    margin-bottom: 10px; /* Espaçamento abaixo dos parágrafos dentro do contêiner */
+}

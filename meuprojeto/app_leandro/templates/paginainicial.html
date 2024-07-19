@@ -1,0 +1,37 @@
+<body>
+<!-- Cabeçalho -->
+<header>
+{% extends "template.html" %}
+{%block titulo%}
+Página inicial
+{%endblock%}
+{% block conteudo%}
+ 
+
+
+    <h2 style="text-align: center; font-size: 25px; font-family: Segoe UI;">Bem vindo à Orange Parking</h2>
+    <!--Cria um título de nível 2-->
+    <!-- <hr> -->
+    <!--Cria uma linha horizontal.-->
+</header> 
+
+<!--Corpo-->
+<main>    
+    <div class="divimg">
+        <img class="imglogo" src="{{url_for('static', filename='logo_orange.png')}}">
+        <!--Cria uma imagem.-->
+      </div>
+</main>
+
+<!-- Rodapé -->
+<footer class="container-fluid">
+  <section class="row">
+    <div class="col-md-12">
+      <i class="bi bi-c-circle"></i> Copyright 2024 - Orange Parking
+    </div>
+  </section>
+</footer>
+
+</body>
+
+{%endblock%}

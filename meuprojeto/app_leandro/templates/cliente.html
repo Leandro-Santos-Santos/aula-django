@@ -1,0 +1,48 @@
+{% extends "template.html" %}
+{%block titulo%}
+Cliente
+{%endblock%}
+{% block conteudo%}
+<h2 style="text-align: center; font-size: 25px; font-family: Segoe UI;">Cliente</h2>
+    <table>
+      <thead>
+          <tr>
+            <th>Nome</th>
+              <th>Email</th>
+              <th>Mensagem</th>
+              <th>Situação</th>
+              <th>Ação</th>
+          </tr>
+      </thead>
+      <tbody>
+          {% for contato in contatos %}
+              <tr>
+                  <td>{{ contato[1] }}</td>
+                  <td>{{ contato[2] }}</td>
+                  <td>{{ contato[3] }}</td>
+                  <td>
+                   {{contato[4] }}
+                    <td>
+                      {% if contato[4] == 'Finalizado' %}
+                      <a href="" class="Finalizado">Finalizado</a>
+                      {% else %}
+                      <a href="/finalizar_atendimento/{{ contato[0]}}" class="editar">Finalizar Atendimento</a>
+                      {% endif %}
+                  </td>
+              </tr>
+              <footer class="container-fluid">
+                <section class="row">
+                  <div class="col-md-12">
+                    <i class="bi bi-c-circle"></i> Copyright 2024 - Orange Parking
+                  </div>
+                </section>
+              </footer>
+          {% endfor %}
+      </tbody>
+  </table>
+
+ 
+
+   
+    
+{%endblock%}

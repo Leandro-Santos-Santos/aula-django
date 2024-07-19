@@ -1,0 +1,56 @@
+{% extends "template.html" %}
+{%block titulo%}
+Usuários TI
+{%endblock%}
+{% block conteudo%}
+<h2 style="text-align: center; font-size: 25px; font-family: Segoe UI;">Meus clientes</h2>
+    <table>
+      <thead>
+          <tr>
+            <th>Nome</th>
+              <th>Email</th>
+              <th>Mensagem</th>
+              <th>Placa</th>
+              <th>Marca</th>
+              <th>Modelo</th>
+              <th>Cor</th>
+              <th>Ação</th>
+          </tr>
+      </thead>
+      <tbody>
+          {% for contato in contatos %}
+              <tr>
+                  <td>{{ contato[1] }}</td>
+                  <td>{{ contato[2] }}</td>
+                  <td>{{ contato[3] }}</td>
+                  <td>{{ contato[4] }}</td>
+                  <td>{{ contato[5] }}</td>
+                  <td>{{ contato[6] }}</td>
+                  <td>{{ contato[7] }}</td>
+                  <td>
+                    {% if contato[10] == 0%}
+                    <button class="editar">Lido</button>
+                    {%else%}
+                    <button>Não lido</button>
+                    {% endif %}
+
+                  </td>
+              </tr>
+              <!-- Rodapé -->
+<footer class="container-fluid">
+  <section class="row">
+    <div class="col-md-12">
+      <i class="bi bi-c-circle"></i> Copyright 2024 - Orange Parking
+    </div>
+  </section>
+</footer>
+          {% endfor %}
+      </tbody>
+  </table>
+
+ 
+
+   
+    
+{%endblock%}
+    

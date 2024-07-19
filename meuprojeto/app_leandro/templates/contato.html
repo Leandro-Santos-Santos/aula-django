@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<!--Declaração do tipo de documento HTML5.-->
+<html lang="pt-br">
+    <!--Define a tag html como elemento raiz do documento e especifica o idioma como português do Brasil (pt-br).-->
+<link rel="stylesheet" href= "/static">
+<head>
+    <!--Abre a tag head que contém metadados sobre a página.-->
+    <meta charset="UTF-8">
+    <!--Define o charset da página como UTF-8, permitindo a exibição correta de caracteres especiais.-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+    <!--Define o título da página da web, que será exibido na barra de título do navegador.-->
+    <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
+    <!-- Link para o CSS -->
+</head>
+<!--Fecha a tag head.-->
+<body style="text-align: center;font-size: 25px;font-family: Segoe UI;">
+    
+    <div class="divimg">
+        <img class="imglogo" src="{{url_for('static', filename='logo_orange.png')}}">
+        <!--Cria uma imagem.-->
+    </div>
+    
+    <!--Abre a tag body que contém o conteúdo principal da página web que será visualizado pelo usuário.-->
+    <h1 style="text-align: center; font-size: 25px; font-family: Segoe UI;">Formulário de Contato do Cliente</h1>
+    <!--Define um cabeçalho de nível 1 (<h1>) com o texto "Formulário de Contato".-->
+    <form method="POST">
+        <!--Abre a tag form para criar um formulário.-->
+        <!--O atributo method="POST" especifica que o formulário enviará os dados do usuário usando o método HTTP POST.-->
+        {{ form.csrf_token() }}
+        <!--Insere um token CSRF (Cross-Site Request Forgery) gerado pelo Flask-WTF. Esse token é importante para proteger o formulário contra ataques CSRF.-->
+        
+        <div>
+            <!--Abre a tag div para criar um elemento de divisão que agrupa elementos relacionados do formulário.-->
+            <label for="nome">Nome:</label>
+            <!--Define uma tag label associada ao campo de nome do formulário. O atributo for="nome" vincula a etiqueta ao campo de nome, fazendo com que a etiqueta funcione como um texto explicativo para o campo. O texto "Nome:" descreve o que o usuário deve digitar no campo.-->
+            {{ form.nome }}
+            <!--Insere o campo de nome do formulário gerado pelo Flask-WTF. O Flask-WTF renderiza o campo de nome com base na classe StringField definida no formulário.-->
+            {% if form.nome.errors %}
+            <!--Inicia um bloco condicional do Jinja2. A condição verifica se o campo nome do formulário possui erros de validação (form.nome.errors).-->
+                <span style="color: red;">{{ form.nome.errors[0] }}</span>
+                <!--Se a condição for verdadeira (ou seja, se houver erros), exibe a primeira mensagem de erro (form.nome.errors[0]) associada ao campo de nome. A tag span define um elemento inline que exibe a mensagem de erro. O estilo color: red; define a cor da mensagem de erro como vermelho.-->
+            {% endif %}
+            <!--Fecha o bloco condicional do Jinja2.-->
+        </div>
+        <!--Fecha a tag div.-->
+        
+        <div>
+            <label for="email">Email:</label>
+            {{ form.email }}
+            {% if form.email.errors %}
+                <span style="color: red;">{{ form.email.errors[0] }}</span>
+            {% endif %}
+        </div>
+        <!--Fecha a tag div.-->
+        
+        <div>
+            <label for="mensagem">Mensagem:</label>
+            {{ form.mensagem }}
+            {% if form.mensagem.errors %}
+                <span style="color: red;">{{ form.mensagem.errors[0] }}</span>
+            {% endif %}
+        </div>
+        <!--Fecha a tag div.-->
+        
+        <!-- Campos adicionais para os dados do veículo -->
+        <div>
+            <label for="placa_veiculo">Placa do Veículo:</label>
+            {{ form.placa_veiculo }}
+            {% if form.placa_veiculo.errors %}
+                <span style="color: red;">{{ form.placa_veiculo.errors[0] }}</span>
+            {% endif %}
+        </div>
+        <!--Fecha a tag div.-->
+        
+        <div>
+            <label for="marca_veiculo">Marca do Veículo:</label>
+            {{ form.marca_veiculo }}
+            {% if form.marca_veiculo.errors %}
+                <span style="color: red;">{{ form.marca_veiculo.errors[0] }}</span>
+            {% endif %}
+        </div>
+        <!--Fecha a tag div.-->
+        
+        <div>
+            <label for="modelo_veiculo">Modelo do Veículo:</label>
+            {{ form.modelo_veiculo }}
+            {% if form.modelo_veiculo.errors %}
+                <span style="color: red;">{{ form.modelo_veiculo.errors[0] }}</span>
+            {% endif %}
+        </div>
+        <!--Fecha a tag div.-->
+        
+        <div>
+            <label for="cor_veiculo">Cor do Veículo:</label>
+            {{ form.cor_veiculo }}
+            {% if form.cor_veiculo.errors %}
+                <span style="color: red;">{{ form.cor_veiculo.errors[0] }}</span>
+            {% endif %}
+        </div>
+        <!--Fecha a tag div.-->
+        
+        <style>
+            .btn {
+                background-color: orange;
+                color: black;
+                padding: 10px 30px;
+                margin-top: 20px;
+                border: none;
+                cursor: pointer;
+                border-radius: 5px;
+                text-decoration: none;
+                font-size: 16px;
+            }
+        </style>
+       
+        <button type="submit" class="btn">Enviar</button>
+        
+        <!--Define um botão de envio (<button>) do tipo submit. Ao clicar nesse botão, o formulário é enviado para o servidor utilizando o método HTTP POST.-->
+    </form>
+    <!--Fecha a tag form, indicando o final do formulário.-->
+</body>
+<!--Fecha a tag body.-->
+</html>
+<!--Fecha a tag html, indicando o final do documento HTML.-->
+

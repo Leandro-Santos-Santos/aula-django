@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Pagina Erro</title>
+</head>
+<body>
+    <h1>Ocorreu um Erro!</h1>
+
+    <p>Desculpe pelo transtorno, estamos com problemas técnico agora.</p>
+
+    {% if mensagem_erro %}
+        <p><strong>Detalhes do Erro:</strong> {{ mensagem_erro }}</p>
+    {% endif %}
+
+    <p>Por favor, tente acessar mais tarde.</p>
+
+
+</body>
+</html>

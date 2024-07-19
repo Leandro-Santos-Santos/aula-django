@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--Esta linha declara o tipo de documento como HTML.-->
+<html lang="pt-br">
+    <!--Esta linha define o elemento raiz do documento HTML.
+O atributo lang="pt-br" especifica o idioma do conteúdo como português brasileiro. Isso ajuda os mecanismos de pesquisa e tecnologias assistivas a entender melhor o conteúdo.-->
+<link rel="stylesheet" href= "/static">
+<head>
+    <!--Estas linhas estão contidas dentro do elemento <head>, que fornece metadados sobre o documento que não são diretamente exibidos na página.-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <title>Login</title>
+</head>
+<body style="text-align: center;font-size: 25px;font-family: Segoe UI;">
+    <div>
+        <img class="imgpython" src="{{url_for('static', filename='giphy.gif')}}">
+        <h1 style="text-align: center; font-size: 25px; font-family: Segoe UI;">Sistema de chamados Flask</h1>
+
+        <form method="POST" action="/validalogin">
+            <div>
+                <input class="inputlogin" type="text" name="email" placeholder="Nome de Usuário">
+            </div>
+            <div>
+                <input class="inputlogin" type="password" name="senha" placeholder="Senha">
+            </div>
+
+            <button type="submit" class="botaologin">Entrar</button>
+            <div style="margin: 10px">
+              
+           
+        </form>
+        {% set flashed_messages = get_flashed_messages() %}
+        {% if mensagens%}
+           <div class="msg-alertas">
+            {%for msg in mensagens%}
+            <span class="ms erro"><i class="icon icon-hand-paper-o"></i>{{(msg)}}</span>
+           
+            </div>
+            {%endfor%}
+   
+        {%endif%}
+        <a class="botao" href="{{url_for('contato')}}">Cadastrar Clientes</a>
+        <div style="margin: 10px">
+    </div>
+    
+</body>
+</html>
