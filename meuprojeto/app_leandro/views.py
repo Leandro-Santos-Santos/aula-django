@@ -1,14 +1,29 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponseRedirect
 from app_leandro.bmq_config import conecta_no_banco_de_dados
 from .forms import ContatoForm
+from django.shortcuts import render, 
+from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.models import User
+
+from django.views.decorators.csrf import csrf_protect
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.shortcuts import render, redirect
+from django.http import HttpResponseBadRequest
+from django.db import transaction  
+from django.http import HttpResponse, JsonResponse
+from django.contrib import messages
 
 def index(request):
-    return render(request, 'Guia/index.html')
+    return render(request, 'templates/paginainicial.html')
 
-def sobre(request):
-    return render(request, 'Sobre/sobre.html')
+def template(request):
+    return render(request, 'templates/template.html')
 # Create your views here.
+
+def cadastro():
+    
 
 def contato(request):
     if request.method == 'POST':

@@ -21,6 +21,13 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 urlpatterns = [
-    path('', views.index, name='index'),
+    path('cadastro/', views.cadastro, name='cadastro'),
+    path('cliente', views.cliente,name='cliente'),
+    path('contato', views.contato, name='contato'),
+    path('contatos', views.contatos, name='contatos'),
+    path('edit_usuario', views.edit_usuario, name='edit_usuario'),
+    path('erro', views.erro, name='erro'),
+    path('', views.login, name='login'),
+    path('admin/', admin.site.urls),
    
 ]
