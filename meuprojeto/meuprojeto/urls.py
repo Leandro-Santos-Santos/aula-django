@@ -29,5 +29,14 @@ urlpatterns = [
     path('erro', views.erro, name='erro'),
     path('', views.login, name='login'),
     path('admin/', admin.site.urls),
-   
+    path('meus_clientes',views.meus_clientes, name='meus_clientes'),
+    path('paginainicial', views.paginainicial, name='paginainicial'),
+    path('rotas', views.rotas, name='rotas'),
+    path('sobre', views.sobre, name='sobre'),
+    path('sucesso', views.sucesso, name='sucesso'),
+    path('usuarios', views.usuarios, name='usuarios')
 ]
+
+if settings.DEBUG:
+    from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+    urlpatterns += staticfiles_urlpatterns()
